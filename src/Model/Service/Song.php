@@ -12,6 +12,10 @@ class Song
      */
     public function getFullName(SongEntity $songEntity)
     {
-        return $songEntity->firstName . ' ' . $songEntity->lastName;
+        $fullName = $songEntity->artist . ' - ' . $songEntity->title;
+        if ($songEntity->featuredArtists) {
+            $fullName .= ' (ft ' . $songEntity->featuredArtists . ')';
+        }
+        return $fullName;
     }
 }

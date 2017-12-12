@@ -25,7 +25,7 @@ class SongTest extends TestCase
     public function testGetFullName()
     {
         $this->assertSame(
-            'Leo Galleguillos',
+            'Rihanna - Work (ft Drake)',
             $this->songService->getFullName($this->songEntity)
         );
     }
